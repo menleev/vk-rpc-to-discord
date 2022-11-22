@@ -35,7 +35,6 @@ def menu():
                 user_id = file.read()
                 file.close()
                 update()
-        #NoneType
         except TypeError:
             os.system("cls")
             print("ПОСТАВЬТЕ В НАСТРОЙКАХ ВК -Кому в интернете видна моя страница- ПУНКТ -ВСЕМ-!!!")
@@ -71,7 +70,6 @@ def update():
                 song, artist, album, image = get_song()
                 RPC.update(state=artist, details=album, large_image=image, large_text=song)
                 time.sleep(10)
-                #обновляем статус каждые 5 секунд без изменения консоли
                 os.system("cls")
                 print("Статус обновлен")
                 continue
